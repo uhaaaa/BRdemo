@@ -1,0 +1,7 @@
+@charset 'uft-8';
+
+body, html, h1, h2, h3, h4, ul, li, ol, p, hr { margin: 0; padding: 0;}
+
+a { text-decoration: none; color: #363636;}
+
+ul, li {list-style: none;}

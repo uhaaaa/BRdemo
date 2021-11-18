@@ -1,0 +1,136 @@
+@charset 'uft-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+:root {
+    --main-color :#ff7c98 ;
+}
+
+html { scroll-behavior: smooth;}
+
+header {height: 100px; border-bottom: 5px solid var(--main-color); box-sizing: border-box;
+        position: relative;}
+.inner {max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between;}
+
+.logo { margin: 5px 10px ; }
+.logo a img {width: 80px; height: 80px;}
+.menu { width: 60%;}
+
+.smallmenu {display: flex; justify-content: flex-end; margin: 10px 0; }
+.smallmenu li {padding: 0 10px;}
+.smallmenu li:first-child { border-right: 1px solid #ddd; }
+.smallmenu li a { color: #747373;}
+
+nav {}
+nav .mainmenu{ display: flex; justify-content: space-between; }
+nav .mainmenu>li { text-align: center; position: relative; margin-top: 5px; }
+nav .mainmenu>li>a {color: var(--main-color); display: block; padding: 5px 10px; font-size: 24px; font-weight: bold;
+                    font-family: 'Quicksand', sans-serif; text-transform: uppercase;}
+.submenu { display: none; width: 140px; z-index: 999; 
+           position: absolute; left:-25px; top: 55px; }
+.submenu li { font-size: 14px; line-height: 2.5; width: 140px;}
+.submenu li a {color: var(--main-color);}
+.submenu li:hover a { color: #a85f6f;}
+.bg {width: 100%; height: 180px; position: absolute; left: 0; top: 100px;
+     background-color: #fff; z-index: 99; display: none;}
+
+.toggle { position: absolute; top: 40px; right: 15px; font-size: 32px; display: none;
+        color: var(--main-color); cursor: pointer;} 
+
+#slider { width: 100%; overflow: hidden; position: relative; height: 35vw; }
+.slide { width: 400%; display: flex; position: absolute; left: 0; top: 0; height: 100%;}
+.slide li {width: 25%;}
+.slide li img { width: 100%;}
+
+.dot { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);
+    display: flex;}
+.dot span { display: block; width: 15px; height: 15px; border-radius: 50%; 
+            background-color: #ccc; margin: 0 10px; transition: .5s;}
+.dot span.on { background-color: var(--main-color);}
+
+#content {} 
+section {padding: 50px 0;}
+section .section_inner { max-width: 1200px; margin: 0 auto;}
+section h3 { color: var(--main-color); text-transform: uppercase; font-family:'Balsamiq Sans', cursive;
+             text-align: center; margin: 0 0 40px;}
+
+.section1 { }
+.section1 ul { display: flex; justify-content: space-between; margin: 0 1%;}
+.section1 ul li { width: 18%; }
+.section1 ul li a {display: block; overflow: hidden;}
+.section1 ul li a:hover img {transform: scale(1.1);}
+.section1 ul li a img { width:100%; transition: .5s;}
+.section1 ul li h4 { text-align: center; margin: 10px 0; text-transform: capitalize;}
+.section1 ul li:nth-child(1) h4 { color:palevioletred;}
+.section1 ul li:nth-child(2) h4 { color: darkorange;}
+.section1 ul li:nth-child(3) h4 { color: brown;}
+.section1 ul li:nth-child(4) h4 { color: plum;}
+.section1 ul li:nth-child(5) h4 { color: yellowgreen ;}
+.section1 ul li p { color: #747373; line-height: 1.5; text-align: center;}
+
+.section2 {  background-color: #ffe9ee;}
+.section2 ul { display: flex; justify-content: space-between; margin: 0 1%; }
+.section2 ul li { width: 23%; position: relative;}
+.section2 ul li a { }
+.section2 ul li a img {width: 100%; opacity: 1; transition: opacity .8s ease;}
+.section2 ul li:hover a img {width: 100%; opacity: 0.5;}
+.section2 ul li .copy {color: #747373; line-height: 1.5; text-align: center; margin: 10px;}
+.section2 ul li .quick {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); 
+            transition: opacity .8s ease;  color:#fff; font-size: 16px; z-index: 99; padding: 2px 4px;
+            font-weight: bold; opacity:0; text-align: center; background-color: rgba(220, 20, 60, 0.8);
+            border-radius: 10px;}
+.section2 ul li:hover .quick {opacity:1;}
+.quick:hover {cursor: pointer;}
+
+hr {width: 100px; height: 4px; background-color: var(--main-color); border: none;
+    margin: -2px auto;}
+
+.section3 {}
+.section3 ul {display: flex; justify-content: center;}
+.section3 ul li { font-size: 64px; margin: 0 20px; color: var(--main-color); transition: .3s;}
+.section3 ul li:hover { color: #af2e4c; cursor: pointer;}
+
+footer { background-color: #ddd; padding: 50px 0 20px; }
+.footer_inner { max-width: 1040px; margin: 0 auto;}
+.footer_list { display: flex; justify-content: space-between; }
+.footer_list li { margin: 0 20px;}
+.footer_list li a {color: #555;}
+.footer_logo { text-align: center; margin: 20px 0;}
+.copyright {text-align: center; color: #555; }
+
+.top { width: 40px; height: 40px; background-color: var(--main-color); display: none; z-index: 999;
+        text-align: center; line-height: 40px; position: fixed; right: 20px; bottom: 30px;}
+.top a {color: #fff;}
+
+@media screen and (max-width: 920px) {
+    .section1 ul { flex-flow: row wrap; justify-content: center;}
+    .section1 ul li { width: 31%; margin: 0 1%;}
+    .section1 ul li p { margin-bottom: 15px;}
+
+    .section2 ul {  flex-flow: row wrap ;}
+    .section2 ul li { width: 49%;}
+}
+
+@media screen and (max-width: 640px) {
+
+    /*menu 사라지고 햄버거 버튼이 나타나서 toggle 되게 만들기*/
+    nav .mainmenu { display: none; z-index: 9999; position: absolute; top: 100px; left: 0;
+                    background-color: rgba(255, 255, 255, 0.95); width: 100%;}
+    nav .mainmenu>li { text-align: center; position: relative; margin-top: 5px; 
+                        border-bottom: 2px solid var(--main-color); width: 100%;}
+    .toggle { display: block;}
+
+    .section1 ul { flex-flow: column wrap;}
+    .section1 ul li { width: 90%; margin: 0 5%;}
+
+    .section2 ul {   flex-flow: column wrap;}
+    .section2 ul li { width: 90%; margin: 0 5%;}
+
+    .section3 ul { flex-flow: row wrap;}
+    .section3 ul li { font-size: 54px; }
+}
+
+@media screen and (min-width:640px) {
+    nav .mainmenu { display: flex !important;}
+}
